@@ -6,8 +6,6 @@ const textField = document.getElementById('input');
 const loadData = () => {
 	const textField = document.getElementById('input');
 	const input = textField.value;
-	//const input = document.getElementById('input').value;
-	//console.log(input);
 	if (input === '') {
 		validation.innerHTML = '<h6 class="text-center text-danger">Please Enter Book Name</h6>';
 		container.textContent = '';
@@ -41,7 +39,7 @@ const display = (books) => {
 		div.classList.add('col');
 		div.innerHTML = `
             <div class="card">
-                <img src="https://covers.openlibrary.org/b/id/${book.cover_i}-M.jpg" class="card-img-top" alt="...">
+                <img src="https://covers.openlibrary.org/b/id/${book.cover_i}-M.jpg" class="img-fluid card-img-top" alt="...">
                 <div class="card-body">
                   <h2 class="card-title">${book.title}</h2>
                   <h6 class="text-danger">Author : ${book.author_name}</h6>
