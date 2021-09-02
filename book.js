@@ -11,7 +11,7 @@ const loadData = () => {
 		container.textContent = '';
 		number.innerText = '';
 	} else {
-		fetch(`http://openlibrary.org/search.json?q=${input}`).then((res) => res.json()).then((data) => {
+		fetch(`https://openlibrary.org/search.json?q=${input}`).then((res) => res.json()).then((data) => {
 			if (data.numFound === 0) {
 				validation.innerHTML = '<h6 class="text-center text-danger">No Data Found</h6>';
 				container.textContent = '';
